@@ -37,6 +37,11 @@ pub use self::local::Local;
 pub(crate) mod utc;
 pub use self::utc::Utc;
 
+#[cfg(feature = "alloc")]
+pub mod segments;
+#[cfg(feature = "alloc")]
+pub use self::segments::{OffsetAt, OffsetSegment, SegmentError, split_interval};
+
 /// The result of mapping a local time to a concrete instant in a given time zone.
 ///
 /// The calculation to go from a local time (wall clock time) to an instant in UTC can end up in
