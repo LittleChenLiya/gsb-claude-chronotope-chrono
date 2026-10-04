@@ -34,6 +34,9 @@ pub(crate) mod local;
 #[cfg(feature = "clock")]
 pub use self::local::Local;
 
+pub mod split;
+pub use self::split::{OffsetSegment, OffsetSource, SplitError, split_interval};
+
 pub(crate) mod utc;
 pub use self::utc::Utc;
 
