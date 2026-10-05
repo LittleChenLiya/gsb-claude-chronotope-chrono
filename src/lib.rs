@@ -573,6 +573,12 @@ pub use offset::{FixedOffset, Offset, TimeZone, Utc};
 pub mod round;
 pub use round::{DurationRound, RoundingError, SubsecRound};
 
+/// Coverage segmentation for half-open time intervals.
+#[cfg(feature = "alloc")]
+pub mod coverage;
+#[cfg(feature = "alloc")]
+pub use coverage::{ActiveSource, CoverageError, Segment, SourceInterval, coverage};
+
 mod weekday;
 #[doc(no_inline)]
 pub use weekday::ParseWeekdayError;
