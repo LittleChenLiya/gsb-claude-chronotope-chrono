@@ -573,6 +573,9 @@ pub use offset::{FixedOffset, Offset, TimeZone, Utc};
 pub mod round;
 pub use round::{DurationRound, RoundingError, SubsecRound};
 
+#[cfg(feature = "alloc")]
+pub mod coverage;
+
 mod weekday;
 #[doc(no_inline)]
 pub use weekday::ParseWeekdayError;
