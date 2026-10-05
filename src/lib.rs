@@ -586,6 +586,8 @@ mod month;
 pub use month::ParseMonthError;
 pub use month::{Month, Months};
 
+pub mod month_shift;
+
 mod traits;
 pub use traits::{Datelike, Timelike};
 
